@@ -1,6 +1,6 @@
 import kotlin.math.abs
 
-fun part1(input: List<String>): Int {
+private fun part1(input: List<String>): Int {
     infix fun Int.distanceTo(other: Int): Int = abs(this - other)
     fun distances(first: List<Int>, second: List<Int>): List<Int> =
         first.zip(second) { a, b -> a distanceTo b }
@@ -13,7 +13,7 @@ fun part1(input: List<String>): Int {
     ).sum()
 }
 
-fun part2(input: List<String>): Int {
+private fun part2(input: List<String>): Int {
     val pairs = input.map { it.split("   ") }
 
     val secondList = pairs.map { it.last().toInt() }
