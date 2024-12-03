@@ -9,4 +9,4 @@ fun readInput(name: String) = Path("src/$name.txt").readText().trim().lines()
 /**
  * The cleaner shorthand for printing output.
  */
-fun Any?.println() = println(this)
+fun Any?.println() = also { println(this) }
